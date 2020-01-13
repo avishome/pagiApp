@@ -1,0 +1,43 @@
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+  <mat-drawer #drawer [mode]="over">
+     
+    <mat-list role="list">
+     
+    
+ 
+        <mat-action-list>
+
+      <h3 mat-subheader>Notes</h3>
+          <button  mat-list-item (click)="drawer.toggle()" mat-button color="primary" [routerLink]="['/selectWorkPage']">
+              <mat-icon mat-list-icon>folder</mat-icon>
+              <span>list works</span>
+          </button>
+        <mat-divider></mat-divider>
+        <h3 mat-subheader>User</h3>
+          <button mat-list-item (click)="drawer.toggle()" [routerLink]="['/login']">
+              <mat-icon mat-list-icon>folder</mat-icon>
+              <span>login</span>
+          </button>
+          
+        </mat-action-list>
+
+ 
+    <mat-menu #animals="matMenu">
+        <button mat-menu-item>Vertebrates</button>
+        <button mat-menu-item>Invertebrates</button>
+    </mat-menu>
+    </mat-list>
+  </mat-drawer>
+    
+  <mat-drawer-content>
+
+    <button mat-raised-button (click)="drawer.toggle()">nevegation panel</button>
+
+
+<section class="py-5 bg-warning">
+    <div class="container">
+<router-outlet></router-outlet>
+	    </div>
+	</section>
+  </mat-drawer-content>
+</mat-drawer-container>
