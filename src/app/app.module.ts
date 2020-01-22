@@ -38,10 +38,13 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
+import { DropDownListComponent } from '@syncfusion/ej2-angular-dropdowns';
+
+import { GridAllModule } from '@syncfusion/ej2-angular-grids';
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, MyRouterModule,  HttpClientModule, CKEditorModule, MatMenuModule, MatIconModule, BrowserAnimationsModule, DragDropModule , MatDialogModule,RichTextEditorAllModule, MatSlideToggleModule, MatSelectModule, MatSliderModule,MatExpansionModule, MatCheckboxModule, MatSidenavModule ,MatListModule],
+  imports:      [  BrowserModule, FormsModule, MyRouterModule,  HttpClientModule, CKEditorModule, MatMenuModule, MatIconModule, BrowserAnimationsModule, DragDropModule , MatDialogModule,RichTextEditorAllModule, MatSlideToggleModule, MatSelectModule, MatSliderModule,MatExpansionModule, MatCheckboxModule, MatSidenavModule ,MatListModule, GridAllModule],
   entryComponents: [DialogOverviewExampleDialog, DialogNewPageDialog],
-  declarations: [ AppComponent, HelloComponent, LoginComponent, SelectWorkPageComponent, ChapterComponent, SectionComponent , UnitComponent, AdepterComponent,FeedbackComponent, InstructionsComponent,RtextComponent,BuildPageComponent, DialogOverviewExampleDialog, EditUnitComponent, AnswersComponent, NewStudentComponent, RegisterComponent, DialogNewPageDialog],
+  declarations: [ AppComponent, HelloComponent, LoginComponent, SelectWorkPageComponent, ChapterComponent, SectionComponent , UnitComponent, AdepterComponent,FeedbackComponent, InstructionsComponent,RtextComponent,BuildPageComponent, DialogOverviewExampleDialog, EditUnitComponent, AnswersComponent, NewStudentComponent, RegisterComponent, DialogNewPageDialog, DropDownListComponent],
   bootstrap:    [ AppComponent ],
   providers: [ServerConnectService, CookieService]
 })
