@@ -29,6 +29,7 @@ export class SelectWorkPageComponent implements OnInit {
   let T = this.cookieService.get("Token");
   this.server.getWorkPages(T)
     .subscribe((data: any) => {
+      
       //for remove duplicates
       this.workPages = data.filter(function(item, pos) {
           return data.findIndex(function(item2, i){

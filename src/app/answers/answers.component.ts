@@ -47,6 +47,7 @@ inArr(arr,value) {
           if(x.student == stud) { 
             this.showList[i]['obj'].push(x);
             this.showList[i]['student'] = x.student;
+            this.showList[i]['studentName'] = x.studentName;
             if(x.editable){
             this.showList[i]['grades'] = x.grades;
             }
