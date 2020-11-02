@@ -1,6 +1,7 @@
+<div class="container" style="padding-top:50px;">
 <div cdkDropListGroup>
             <button (click)="sections.push([]);send();" mat-menu-item style="border-radius: 50%; border: none">
-          <mat-icon>add</mat-icon>
+          <mat-icon>add</mat-icon>add chapter
         </button>
   <div class="example-container" *ngFor="let sec of sections; index as i">
     <h2 style="display: inline;">chapter {{i+1}}</h2>
@@ -44,4 +45,5 @@
     </div>
   </div>
 
+</div>
 </div>
