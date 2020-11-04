@@ -1,43 +1,21 @@
-<mat-drawer-container class="example-container" [hasBackdrop]="true">
-  <mat-drawer #drawer [mode]="over">
-     
-    <mat-list role="list">
-     
-    
- 
-        <mat-action-list>
+<section class="py-3 bg-warning">
+	<nav class="navbar navbar-expand-sm navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Landing</a>
+			<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#probootstrap-navbar" aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
+<span><i class="fas fa-user"></i></span>
+</button>
+			<div class="collapse navbar-collapse" id="probootstrap-navbar">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" [routerLink]="['/selectWorkPage']">Pages</a></li>
+					<li class="nav-item"><a [routerLink]="['/login']" class="nav-link" href="#section-reviews">login</a>
+					</li>
 
-      <h3 mat-subheader>Notes</h3>
-          <button  mat-list-item (click)="drawer.toggle()" mat-button color="primary" [routerLink]="['/selectWorkPage']">
-              <mat-icon mat-list-icon>folder</mat-icon>
-              <span>list works</span>
-          </button>
-        <mat-divider></mat-divider>
-        <h3 mat-subheader>User</h3>
-          <button mat-list-item (click)="drawer.toggle()" [routerLink]="['/login']">
-              <mat-icon mat-list-icon>folder</mat-icon>
-              <span>login</span>
-          </button>
-          
-        </mat-action-list>
-
- 
-    <mat-menu #animals="matMenu">
-        <button mat-menu-item>Vertebrates</button>
-        <button mat-menu-item>Invertebrates</button>
-    </mat-menu>
-    </mat-list>
-  </mat-drawer>
-    
-  <mat-drawer-content>
-
-    <button mat-raised-button (click)="drawer.toggle()">nevegation panel</button>
-
-
-<section class="py-5 bg-warning">
-    <div class="container">
-<router-outlet></router-outlet>
-	    </div>
-	</section>
-  </mat-drawer-content>
-</mat-drawer-container>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<router-outlet></router-outlet>
+	</div>
+</section>
