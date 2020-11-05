@@ -25,6 +25,10 @@ export class ServerConnectService {
     let loginstring = {"user":this.cookieService.get("Token"),"code":code,"viewOnly":viewOnly};
     return this.http.post(this.baseUrl+'joinPage',loginstring);
   }
+  getTeacherCode(page) {
+    let loginstring = {"user":this.cookieService.get("Token"),"page":page};
+    return this.http.post(this.baseUrl+'getTeacherCode-1',loginstring);
+  }
   newPage(name,desc) {
     let loginstring = {"user":this.cookieService.get("Token"),"name":name,"desc":desc};
     return this.http.post(this.baseUrl+'newPage',loginstring);

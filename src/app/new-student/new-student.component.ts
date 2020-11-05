@@ -34,10 +34,15 @@ public dReady: boolean = false;
     ]; 
     public fields: Object = { text: 'text', value: 'value' };
     private item: number[] = [1, 2, 3, 4, 5];  
-    
+    public page;
 
   constructor(private activatedRoute:ActivatedRoute,private server: ServerConnectService) { }
   private sections=[];
+  getTeacherCode(){
+    this.server.getTeacherCode(this.page).subscribe((data: any) => {
+      console.log(data)
+    })
+  }
   ngOnInit() {
     try{
     this.activatedRoute.firstChild.params.subscribe(
@@ -45,7 +50,7 @@ public dReady: boolean = false;
             this.server.share(params['num'])
                 .subscribe((data: any) => {
                   this.data = data;
-                  
+                  this.page = params['num'];
                 });
             
        }
