@@ -41,6 +41,7 @@ public dReady: boolean = false;
   getTeacherCode(){
     this.server.getTeacherCode(this.page).subscribe((data: any) => {
       console.log(data)
+      this.ngOnInit()
     })
   }
   ngOnInit() {
