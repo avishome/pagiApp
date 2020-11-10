@@ -5,7 +5,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-
+html{ height:100%}
  @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
  .e-richtexteditor .e-rte-content .e-content, .e-richtexteditor .e-source-content .e-content {
     min-height: 0px !important;
