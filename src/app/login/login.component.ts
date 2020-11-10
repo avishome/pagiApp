@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/selectWorkPage']);
   }
   loginF(user,pass){
+  this.echo = "Verifies details...";
   this.server.login(user.value,pass.value).subscribe(
     (data: Login)=>{
       
