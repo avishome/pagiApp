@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
   loginF(user,pass,fname,lname){
+  this.echo = "Please wait";
   this.server.register(user.value,pass.value,fname.value,lname.value).subscribe(
     (data : any)=>{
       console.log(data);
