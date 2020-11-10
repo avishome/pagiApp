@@ -9,13 +9,17 @@ import { ServerConnectService } from '../server-connect.service';
 export class UnitComponent implements OnInit {
   @Input() unitId;
   @Input() edit = false;
+  private wait = true;
   private data;
-  constructor(private server: ServerConnectService) { }
+  constructor(private server: ServerConnectService) { 
+      
+  }
 
   ngOnInit() {
     console.log(this.unitId);
     this.server.getUnit(this.unitId, this.edit)
     .subscribe((data: any) => {
+      this.wait = false;
       this.data = data; console.log(data);
 //      if(this.edit)this.editMode(this.data);
       });

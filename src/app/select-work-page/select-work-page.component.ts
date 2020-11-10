@@ -17,7 +17,7 @@ export interface DialogData {
 })
 
 export class SelectWorkPageComponent implements OnInit {
-  
+  private wait = true;
   private workPages = [];
   private newWorkPage = [];
   constructor(private server: ServerConnectService, private cookieService: CookieService,  public dialog: MatDialog ) { }
@@ -29,7 +29,7 @@ export class SelectWorkPageComponent implements OnInit {
   let T = this.cookieService.get("Token");
   this.server.getWorkPages(T)
     .subscribe((data: any) => {
-      
+      this.wait = false;
       //for remove duplicates
       this.workPages = data.filter(function(item, pos) {
           return data.findIndex(function(item2, i){

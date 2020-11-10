@@ -15,7 +15,7 @@
           </button>
           <button mat-menu-item (click)="viewonly(code.value)">
             <mat-icon>share</mat-icon>
-            <span>view link detailse</span>
+            <span>view link Details</span>
           </button>
         </mat-menu>
     </div>
@@ -23,7 +23,7 @@
      
         <button type="button" class="btn btn-warning btn-sm btn-block" (click)="openDialog()">create own page</button>
        </div>
-     
+  <div *ngIf="this.wait">Loading information...</div>     
 	<div class="row mb-3" *ngFor="let item of workPages">
 	    <div class="col-md-8">
 	        <div class="card shadow">

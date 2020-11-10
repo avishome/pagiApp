@@ -12,12 +12,12 @@ export class SectionComponent implements OnInit {
    @Input() data;
    private present = 0;
    private Msg = "";
+   private wait = true;
   constructor(private activatedRoute:ActivatedRoute,private router:Router,private server: ServerConnectService) { }
 
   ngOnInit() {
     this.activatedRoute.fragment.subscribe(
       (params: any) => {
-        console.log(this.data.length)
         if((params-1)>=0 && (params-1)<this.data.length)
           {
             this.present = (params-1);
