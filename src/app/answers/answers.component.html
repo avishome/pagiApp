@@ -2,9 +2,9 @@
 <h4 >Check answers of your students</h4>
 <mat-form-field>
   <mat-label>select unit</mat-label>
-  <mat-select (selectionChange)="selectUnit(select.value)" #select>
+  <mat-select [value]="sections[0][0]" (selectionChange)="selectUnit(select.value)" #select>
     <mat-optgroup *ngFor="let group of sections; index as i" [label]="'page '+i">
-      <mat-option *ngFor="let unit of group" [value]="unit">
+      <mat-option *ngFor="let unit of group; index as y" [value]="unit">
         {{unit}}
       </mat-option>
     </mat-optgroup>

@@ -71,7 +71,6 @@ export class ServerConnectService {
   
   login(user,pass){
     let loginstring = {"user":user,"pass":pass};
-    console.log(user,pass);
     return this.http.post(this.baseUrl+'login',loginstring);
   }
   
